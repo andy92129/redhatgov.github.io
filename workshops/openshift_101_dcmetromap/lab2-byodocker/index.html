@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Lab 2 - BYO Docker | Red Hat | Public Sector</title>
+
+    
+    
+    <link rel="stylesheet" href="/node_modules/patternfly/dist/css/patternfly.min.css" />
+    <link rel="stylesheet" href="/node_modules/patternfly/dist/css/patternfly-additions.min.css" />
+
+    
+    <link rel="stylesheet" href="/node_modules/highlight.js/styles/darkula.css" />
+
+    
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/asciidoc.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+    <script id="adobe_dtm" src="//www.redhat.com/dtm.js" type="text/javascript"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/c3/c3.min.js"></script>
+    <script src="/node_modules/patternfly/node_modules/d3/d3.min.js"></script>
+
+    
+    
+    <script src="/node_modules/patternfly/node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/node_modules/patternfly/node_modules/drmonty-datatables-colvis/js/dataTables.colVis.js"></script>
+    <script src="/node_modules/patternfly/node_modules/datatables.net-colreorder/js/dataTables.colReorder.js"></script>
+
+    
+    
+    <script src="/node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/patternfly-bootstrap-combobox/js/bootstrap-combobox.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/moment/min/moment.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+
+    
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    
+    <script src="/node_modules/patternfly/node_modules/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
+    
+    <script src="/js/clipboard.min.js"></script>
+    <script src="/js/clip.js"></script>
+    
+    <script src="/node_modules/highlight.js/lib/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body class="">
+    
+
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/img/brand.png" alt="Red Hat | Public Sector" />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+          
+            <li>
+              <a href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/contact/">Contact</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="/events/">Events</a>
+            </li>
+          
+        
+          
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Workshops <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                
+                  <li>
+                    <a href="/workshops/agile_integrations_ci/">Agile Integrations Workshop - Citizen Integrator</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/agile_integrations_dev/">Agile Integrations Workshop - Developer</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/ansible_tower/">Ansible Tower Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/ansible_tower_azure/">Ansible Tower Workshop on Azure</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/cloudforms41/">CloudForms Workshops</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/security_containers/">Container Security Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/containers_101/">Containers 101 Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/secure_software_factory/">DevSecOps Workshop - Secure Software Factory</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/example/">Example Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/jdv_dev/">JBoss Data Virtualization Development</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/strangling_the_monolith/">Microservices Workshop - Strangling the Monolith</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/openshift_101_dcmetromap/">OpenShift 101 - DC Metro Map Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/security_openshift/">OpenShift Security Workshop</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/rhosp_101/">Red Hat OpenStack Platform 101</a>
+                  </li>
+                
+                  <li>
+                    <a href="/workshops/source_to_image/">Source to Image</a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="jumbotron jumbotron-page text-center">
+  <h1>Lab 2 - BYO Docker</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <p class="text-center">
+      
+      <a href="http://redhatgov.io/workshops/openshift_101_dcmetromap">Return to Workshop</a>
+    </p>
+    
+    
+
+
+
+
+
+
+
+<nav>
+  <ul class="pager">
+    
+      <li class="previous">
+        <a href="http://redhatgov.io/workshops/openshift_101_dcmetromap/lab1-welcome/">&larr; Previous: Lab 1 - Welcome</a>
+      </li>
+    
+    
+      <li class="next">
+        <a href="http://redhatgov.io/workshops/openshift_101_dcmetromap/lab3-s2i/">Next: Lab 3 - Deploying an App with S2I &rarr;</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    
+
+<h1 id="bring-your-own-docker">Bring your own docker</h1>
+
+<p>It's easy to get started with OpenShift whether you're using our app templates or bringing your existing docker assets.  In this quick lab we will deploy an application using an exisiting docker image.  OpenShift will create an image stream for the image as well as deploy and manage containers based on that image.  And we will dig into the details to show how all that works.</p>
+
+<h2 id="let-s-point-openshift-to-an-existing-built-docker-image">Let's point OpenShift to an existing built docker image</h2>
+
+<div class="panel-group">
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      
+      <a data-toggle="collapse" href="#collapseb7fe72bcc5348c14e608b76c942b6a85" class="collapsed">
+      
+        CLI Steps
+      </a>
+    </h4>
+  </div>
+  
+  <div id="collapseb7fe72bcc5348c14e608b76c942b6a85" class="panel-collapse collapse ">
+  
+    <div class="panel-body">
+       <p><blockquote>
+<i class="fa fa-terminal"></i> Goto the terminal and type the following:
+</blockquote></p>
+
+<pre><code class="language-bash">$ oc new-app kubernetes/guestbook
+</code></pre>
+
+<p><blockquote>
+The output should show something <em>similar</em> to below:
+</blockquote></p>
+
+<pre><code class="language-bash">--&gt; Found docker image a49fe18 (17 months old) from docker Hub for &quot;kubernetes/guestbook&quot;
+    * An image stream will be created as &quot;guestbook:latest&quot; that will track this image
+    * This image will be deployed in deployment config &quot;guestbook&quot;
+    * Port 3000/tcp will be load balanced by service &quot;guestbook&quot;
+--&gt; Creating resources with label app=guestbook ...
+    ImageStream &quot;guestbook&quot; created
+    DeploymentConfig &quot;guestbook&quot; created
+    Service &quot;guestbook&quot; created
+--&gt; Success
+    Run 'oc status' to view your app.
+</code></pre>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      
+      <a data-toggle="collapse" href="#collapseeeb919cbcac8e4b318865916349e3314" class="collapsed">
+      
+        Web Console Steps
+      </a>
+    </h4>
+  </div>
+  
+  <div id="collapseeeb919cbcac8e4b318865916349e3314" class="panel-collapse collapse ">
+  
+    <div class="panel-body">
+       <blockquote>
+Click "Add to Project"
+</blockquote>
+<img src="../images/ocp-addToProjectButton.png" width="150"><br/>
+
+<blockquote>
+Select the "Deploy Image" option from the drop down
+</blockquote>
+<img src="../images/ocp-guestbook-deploy-image.png" width="200"><br/>
+
+<blockquote>
+Select the option for "Image Name" and enter "kubernetes/guestbook", then click the magnifying glass to the far right to search for the image.
+</blockquote>
+<img src="../images/ocp-guestbook-imagename-expand.png" width="600"><br/>
+
+<blockquote>
+Observe default values that are populated in the search results
+</blockquote>
+<img src="../images/ocp-guestbook-create-1.png" width="600"><br/>
+
+<blockquote>
+Click "Deploy" then click "Close"
+</blockquote>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+<h2 id="we-can-browse-our-project-details-with-the-command-line">We can browse our project details with the command line</h2>
+
+<blockquote>
+<p><i class="fa fa-terminal"></i> Try typing the following to see what is available to 'get':</p>
+</blockquote>
+
+<pre><code class="language-bash">$ oc get all
+</code></pre>
+
+<blockquote>
+<p><i class="fa fa-terminal"></i> Now let's look at what our image stream has in it:</p>
+</blockquote>
+
+<pre><code class="language-bash">$ oc get is
+</code></pre>
+
+<pre><code class="language-bash">$ oc describe is/guestbook
+</code></pre>
+
+
+
+
+  <div class="alert alert-info">
+    
+    <span class="pficon pficon-info"></span>
+    <p>An image stream can be used to automatically perform an action, such as updating a deployment, when a new image, in our case a new version of the guestbook image, is created.</p>
+
+  </div>
+
+
+
+<blockquote>
+<p><i class="fa fa-terminal"></i> The app is running in a pod, let's look at that:</p>
+</blockquote>
+
+<pre><code class="language-bash">$ oc describe pods
+</code></pre>
+
+<h2 id="we-can-see-those-details-using-the-web-console-too">We can see those details using the web console too</h2>
+
+<p>Let's look at the image stream.</p>
+
+<blockquote>
+Click on "Builds -> Images"
+</blockquote>
+
+<p><img src="../images/ocp-guestbook-buildimages.png" width="200"><br/></p>
+
+<p>This shows a list of all image streams within the project.</p>
+
+<blockquote>
+Now click on the guestbook image stream
+</blockquote>
+
+<p>You should see something similar to this:</p>
+
+<p><img src="../images/ocp-guestbook-is.png" width="600"><br/></p>
+
+<h2 id="does-this-guestbook-do-anything">Does this guestbook do anything?</h2>
+
+<p>Good catch, your service is running but there is no way for users to access it yet.  We can fix that from the web console or the command line. You decide which you'd rather do from the steps below.</p>
+
+<div class="panel-group">
+  
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      
+      <a data-toggle="collapse" href="#collapsed6f6910aaacbd115ae3b2a0a18deb895" class="collapsed">
+      
+        CLI Steps
+      </a>
+    </h4>
+  </div>
+  
+  <div id="collapsed6f6910aaacbd115ae3b2a0a18deb895" class="panel-collapse collapse ">
+  
+    <div class="panel-body">
+       <blockquote>
+<i class="fa fa-terminal"></i> In the command line type this:
+</blockquote>
+
+<pre><code class="language-bash">$ oc expose service guestbook
+</code></pre>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      
+      <a data-toggle="collapse" href="#collapse18cd1ead39cf847ce83290fcf53e60a8" class="collapsed">
+      
+        Web Console Steps
+      </a>
+    </h4>
+  </div>
+  
+  <div id="collapse18cd1ead39cf847ce83290fcf53e60a8" class="panel-collapse collapse ">
+  
+    <div class="panel-body">
+       <blockquote>
+"Overview"
+</blockquote>
+
+<p><img src="../images/ocp-guestbook-overview.png" width="400"><br/></p>
+
+<blockquote>
+Select the arrow '>' next to 'guestbook, #' 
+</blockquote>
+
+<p><img src="../images/ocp-guestbook-arrow1.png" width="200"><br/>
+<img src="../images/ocp-guestbook-arrow2.png" width="200"><br/></p>
+
+<blockquote>
+To get to this view
+</blockquote>
+
+<p><img src="../images/ocp-guestbook-noroute.png" width="600"><br/></p>
+
+<p>Notice there is no exposed route </p>
+
+<blockquote>
+Click on the "Create Route" link
+</blockquote>
+
+<p><img src="../images/ocp-guestbook-createRoute.png" width="600"><br/></p>
+
+<p>This is where you could specify route parameters, but we will just use the defaults.</p>
+
+<blockquote>
+Click "Create"
+</blockquote>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+  <div class="alert alert-info">
+    
+    <span class="pficon pficon-info"></span>
+    <p>You can also create secured HTTPS routes, but that's a topic for a more advanced workshop</p>
+
+  </div>
+
+
+
+<h2 id="test-out-the-guestbook-webapp">Test out the guestbook webapp</h2>
+
+<p>Notice that in the web console overview, you now have a URL in the service box.  There is no database setup, but you can see the webapp running by clicking the route you just exposed.</p>
+
+<blockquote>
+<p>Click the link in the service box. You should see:</p>
+</blockquote>
+
+<p><img src="../images/ocp-guestbook-app.png" width="600"><br/></p>
+
+<h2 id="good-work-let-s-clean-this-up">Good work, let's clean this up</h2>
+
+<blockquote>
+<p><i class="fa fa-terminal"></i> Let's clean up all this to get ready for the next lab:</p>
+</blockquote>
+
+<pre><code class="language-bash">$ oc delete all --all
+</code></pre>
+
+<h1 id="summary">Summary</h1>
+
+<p>In this lab you've deployed an example docker image, pulled from docker hub, into a pod running in OpenShift.  You exposed a route for clients to access that service via thier web browsers.  And you learned how to get and describe resources using the command line and the web console.  Hopefully, this basic lab also helped to get you familiar with using the CLI and navigating within the web console.</p>
+
+<hr>
+<h3>Workshop Details</h3>
+<div class="row">
+  <div class="col-lg-4 col-md-5 col-sm-12" id="workshopFooterDetails">
+    <table>
+      <tr>
+        <td class="text-right"><b>Domain</b></td>
+        <td><span class="domain"></span></td>
+        <td rowspan="3">
+          <img src="https://www.redhat.com/files/brand/email/sig-redhat.png" alt="Red Hat Logo" />
+        </td>
+      </tr>
+      <tr>
+        <td class="text-right"><b>Workshop</b></td>
+        <td><span class="prefix"></span></td>
+      </tr>
+      <tr>
+        <td class="text-right"><b>Student ID</b></td>
+        <td><span class="userid"></span></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-lg-8 col-md-7 col-sm-12">
+    <form id="footerForm" onsubmit="return false;" class="row" style="padding: 1.75rem 0 0 0;">
+      <div class="form-group col-sm-6 col-md-6 col-lg-2">
+        <label for="userid">Student ID</label>
+        <select id="userid" name="userid" class="form-control">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+          <option value="33">33</option>
+          <option value="34">34</option>
+          <option value="35">35</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+          <option value="46">46</option>
+          <option value="47">47</option>
+          <option value="48">48</option>
+          <option value="49">49</option>
+          <option value="50">50</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6 col-md-6 col-lg-4">
+        <label for="domain">Domain</label>
+        <select id="domain" name="domain" class="form-control">
+          <option value="redhatgov.io">redhatgov.io</option>
+          <option value="az.redhatgov.io">az.redhatgov.io</option>
+          <option value="redhat-fierce.io">redhat-fierce.io</option>
+          <option value="fiercesw.network">fiercesw.network</option>
+          <option value="rhtps.io">rhtps.io</option>
+          <option value="openshiftworkshop.com">openshiftworkshop.com</option>          
+          <option value="redhatpsmwsa.com">redhatpsmwsa.com</option>          
+        </select>
+      </div>
+      <div class="form-group col-sm-6 col-md-6 col-lg-3">
+        <label for="prefix">Workshop</label>
+        <input id="prefix" name="prefix" type="text" size="16" class="form-control" placeholder="example" />
+      </div>
+      <div class="form-group col-sm-6 col-md-6 col-lg-3">
+        <button type="submit" class="btn btn-primary form-control" style="margin-bottom:1rem;">Enter</button>
+        <button type="reset" class="btn btn-default form-control">Default</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<hr>
+
+<script type="text/javascript" src="/node_modules/js-cookie/src/js.cookie.js"></script>
+<script type="text/javascript">
+<!--
+  
+  var Cookies2 = Cookies.noConflict();
+
+  var cookiePathArr = cleanArray(window.location.pathname.split('/'));
+  var cookiePath = '/' + cookiePathArr[0] + '/' + cookiePathArr[1] + '/';
+
+  function cleanArray(actual) {
+    var newArray = new Array();
+    for (var i = 0; i < actual.length; i++) {
+      if (actual[i]) {
+        newArray.push(actual[i]);
+      }
+    }
+    return newArray;
+  }
+  function replaceClassText() {
+    jQuery("span.domain").html(Cookies2.get("domain"));
+    jQuery("span.userid").html(Cookies2.get("userid"));
+    jQuery("span.prefix").html(Cookies2.get("prefix"));
+  }
+  function pageLoadWorkshopFooterTest() {
+    
+    if (Cookies2.get("domain") === undefined) {
+      resetWorkshopFooter();
+    }
+    else {
+      replaceClassText();
+      setWorkshopFooterInputValues()
+    }
+  }
+  function setWorkshopFooterData() {
+    
+    Cookies2.set("domain", jQuery("select#domain").val(), { path: cookiePath, expires: 7 } );
+    Cookies2.set("prefix", jQuery("input#prefix").val(), { path: cookiePath, expires: 7 } );
+    Cookies2.set("userid", jQuery("select#userid").val(), { path: cookiePath, expires: 7 } );
+    replaceClassText();
+  }
+  function setWorkshopFooterInputValues() {
+    jQuery("select#domain").val(Cookies2.get("domain"));
+    jQuery("input#prefix").val(Cookies2.get("prefix"));
+    jQuery("select#userid").val(Cookies2.get("userid"));
+  }
+  function resetWorkshopFooter() {
+    
+    jQuery("select#domain, select#userid").prop("selectedIndex", 0);
+    jQuery("input#prefix").val(jQuery("input#prefix").attr('placeholder'));
+    
+    Cookies2.set("domain", jQuery("select#domain option").first().val(), { path: cookiePath, expires: 7 } ); 
+    Cookies2.set("userid", jQuery("select#userid option").first().val(), { path: cookiePath, expires: 7 } ); 
+    Cookies2.set("prefix", jQuery("input#prefix").val(), { path: cookiePath, expires: 7 } );
+    
+    
+    replaceClassText();
+  }
+
+  jQuery(document).ready(function() {
+    pageLoadWorkshopFooterTest();
+
+    jQuery("form#footerForm").submit(function() {
+      setWorkshopFooterData();
+      return false; 
+    });
+
+    jQuery("form#footerForm").bind("reset", function() {
+      resetWorkshopFooter();
+      return true;
+    });
+
+    return false;
+  });
+-->
+</script>
+
+
+
+
+    
+
+
+
+
+
+
+
+<nav>
+  <ul class="pager">
+    
+      <li class="previous">
+        <a href="http://redhatgov.io/workshops/openshift_101_dcmetromap/lab1-welcome/">&larr; Previous: Lab 1 - Welcome</a>
+      </li>
+    
+    
+      <li class="next">
+        <a href="http://redhatgov.io/workshops/openshift_101_dcmetromap/lab3-s2i/">Next: Lab 3 - Deploying an App with S2I &rarr;</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+    <p class="text-center">
+      
+      <a href="http://redhatgov.io/workshops/openshift_101_dcmetromap">Return to Workshop</a>
+    </p>
+  </div>
+</div>
+
+    <div id="page-footer" class="container">
+      <p class="text-center">
+        Copyright &copy; 2019 Red Hat, Inc.
+      </p>
+    </div>
+    <script type="text/javascript">
+      if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pageBottom)) {
+          _satellite.pageBottom();
+      }
+    </script>
+  </body>
+</html>
+

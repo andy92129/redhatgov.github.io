@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events on Red Hat | Public Sector</title>
+    <link>http://redhatgov.io/events/</link>
+    <description>Recent content in Events on Red Hat | Public Sector</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://redhatgov.io/events/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DevNation Federal</title>
+      <link>http://redhatgov.io/events/20190627-devnation-federal-a7b7270ba40ebd3010adccca108a37e2/</link>
+      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190627-devnation-federal-a7b7270ba40ebd3010adccca108a37e2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Red Hat DevSecOps Roadshow - Philadelphia</title>
+      <link>http://redhatgov.io/events/20190613-red-hat-devsecops-roadshow-philadelphia-a3dbee5fe8f089877ce920b8519fa727/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190613-red-hat-devsecops-roadshow-philadelphia-a3dbee5fe8f089877ce920b8519fa727/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Red Hat DevSecOps Roadshow - Albany</title>
+      <link>http://redhatgov.io/events/20190611-red-hat-devsecops-roadshow-albany-e23cbd4a5c2e0463622a53db4efb8469/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190611-red-hat-devsecops-roadshow-albany-e23cbd4a5c2e0463622a53db4efb8469/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Red Hat DevSecOps Roadshow - Norfolk</title>
+      <link>http://redhatgov.io/events/20190606-red-hat-devsecops-roadshow-norfolk-6a93223c395f222e0ab761b441edce3a/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190606-red-hat-devsecops-roadshow-norfolk-6a93223c395f222e0ab761b441edce3a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Red Hat DevSecOps Roadshow - Sunnyvale</title>
+      <link>http://redhatgov.io/events/20190529-red-hat-devsecops-roadshow-sunnyvale-aaef9d1b293c995e1529b1418c06ea34/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190529-red-hat-devsecops-roadshow-sunnyvale-aaef9d1b293c995e1529b1418c06ea34/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Red Hat DevSecOps Roadshow - St. Louis</title>
+      <link>http://redhatgov.io/events/20190523-red-hat-devsecops-roadshow-st-louis-7fcf9aa91b1ac447f5a1f4e958baa6aa/</link>
+      <pubDate>Thu, 23 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190523-red-hat-devsecops-roadshow-st-louis-7fcf9aa91b1ac447f5a1f4e958baa6aa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Red Hat DevSecOps Roadshow - Minneapolis</title>
+      <link>http://redhatgov.io/events/20190521-red-hat-devsecops-roadshow-minneapolis-c0230a2c4da1693807fb6ce71a9d413e/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190521-red-hat-devsecops-roadshow-minneapolis-c0230a2c4da1693807fb6ce71a9d413e/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Red Hat DevSecOps Roadshow - McLean</title>
+      <link>http://redhatgov.io/events/20190515-red-hat-devsecops-roadshow-mclean-68b9e771567aaac5e05410b857302a6c/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190515-red-hat-devsecops-roadshow-mclean-68b9e771567aaac5e05410b857302a6c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ansible Automates - DC</title>
+      <link>http://redhatgov.io/events/20190411-ansible-automates-dc-3cba2a5de6c8e20eb14669120732f324/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190411-ansible-automates-dc-3cba2a5de6c8e20eb14669120732f324/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Red Hat DevSecOps Roadshow - San Diego</title>
+      <link>http://redhatgov.io/events/20190411-red-hat-devsecops-roadshow-san-diego-81c011859dc062ca023d02fb3ee170fe/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://redhatgov.io/events/20190411-red-hat-devsecops-roadshow-san-diego-81c011859dc062ca023d02fb3ee170fe/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
